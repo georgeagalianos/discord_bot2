@@ -8,26 +8,16 @@ client.once('ready' , ()=> {
     console.log('bot working!');
 })
 
-// function onClientReady()
-// {
-//     // Listen to Messages in the channel
-//     bot.on('message', (message) => onMessageReceived(message));
-// }
 client.login('NzY2NDI0Nzg0NDIyNDM2OTU0.X4jKtA.1khHixWR8kMp4JTz8ScaiDD5PGM');
 
-
-// function RPGHUNT(user , message) {
-//     //client.on('msg' , msg => {
-//         client.message.send('rpg hunt')
-//     //})
-// }
+const channel = client.channels.cache.get('<id>');
 
 
 
 
 
 
-//dexetai ta commands
+//δεχεται τα commands(σειρα:2)
 function CommandsOrder(user , Number , flag) {
 
     if(Number == 1) { 
@@ -36,7 +26,7 @@ function CommandsOrder(user , Number , flag) {
     }
 }
 
-//vazei se queue ta commands
+//βαζει σε queue τα commands(σειρα:3)
 function Queue(callback , Number , flag) {
         if(Number == 1) {
             setTimeout(callback , 10000 , flag.a = 1);
@@ -44,13 +34,16 @@ function Queue(callback , Number , flag) {
 }
 
 
-    const channel = client.channels.cache.get('<id>');
+    
 
+
+
+    //αρχικο loop(σειρα:1)
     client.on('message' , message => {
         let flag = {a : 0}
         const user = client.users.cache.get('<id>');
 
-        console.log('ARXH->flag.a:' , flag.a , '+' , 'flag:' , flag)
+        //console.log('ARXH->flag.a:' , flag.a , '+' , 'flag:' , flag)
 
         if(message.content === 'HELLO') {
             CommandsOrder(user , 1 , flag.a);
@@ -60,6 +53,6 @@ function Queue(callback , Number , flag) {
             }
         }
 
-        console.log('EKSW->flag.a:' , flag.a , '+' , 'flag:' , flag)
+        //console.log('EKSW->flag.a:' , flag.a , '+' , 'flag:' , flag)
     
     })
