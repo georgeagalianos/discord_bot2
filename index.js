@@ -8,7 +8,7 @@ client.once('ready' , ()=> {
     console.log('bot working!');
 })
 
-client.login('NzY2NDI0Nzg0NDIyNDM2OTU0.X4jKtA.1khHixWR8kMp4JTz8ScaiDD5PGM');
+client.login('');
 
 const channel = client.channels.cache.get('<id>');
 
